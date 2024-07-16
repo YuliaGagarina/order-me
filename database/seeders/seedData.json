@@ -1,0 +1,206 @@
+{
+    "products": [
+        {
+            "vendor_id": 1
+        },
+        {
+            "vendor_id": 1
+        },
+        {
+            "vendor_id": 1,
+            "inCampaign": true,
+            "campaign_id": 1,
+            "initial_quantity": 5,
+            "quantity": 0,
+            "variations": [
+                {
+                    "initial_quantity": 2,
+                    "quantity": 0,
+                    "attributes": [
+                        {
+                            "name": "Color",
+                            "value": "Red"
+                        },
+                        {
+                            "name": "Size",
+                            "value": "L"
+                        }
+                    ],
+                    "users": [6, 12]
+                },
+                {
+                    "initial_quantity": 3,
+                    "quantity": 0,
+                    "attributes": [
+                        {
+                            "name": "Color",
+                            "value": "Blue"
+                        },
+                        {
+                            "name": "Size",
+                            "value": "L"
+                        }
+                    ],
+                    "users": [7, 16, 20]
+                }
+            ]
+        },
+        {
+            "vendor_id": 2
+        },
+        {
+            "vendor_id": 2,
+            "inCampaign": true,
+            "campaign_id": 2,
+            "quantity": 1,
+            "initial_quantity": 5,
+            "users": [10, 25, 7, 15]
+        },
+        {
+            "vendor_id": 3
+        },
+        {
+            "vendor_id": 3
+        },
+        {
+            "vendor_id": 3,
+            "inCampaign": true,
+            "campaign_id": 3,
+            "quantity": 0,
+            "initial_quantity": 5,
+            "variations": [
+                {
+                    "initial_quantity": 2,
+                    "quantity": 0,
+                    "attributes": [
+                        {
+                            "name": "Color",
+                            "value": "White"
+                        },
+                        {
+                            "name": "Size",
+                            "value": "XL"
+                        }
+                    ],
+                    "users": [4, 14]
+                },
+                {
+                    "initial_quantity": 3,
+                    "quantity": 0,
+                    "attributes": [
+                        {
+                            "name": "Color",
+                            "value": "Black"
+                        },
+                        {
+                            "name": "Size",
+                            "value": "XL"
+                        }
+                    ],
+                    "users": [32, 19, 25]
+                }
+            ]
+        },
+        {
+            "vendor_id": 3,
+            "inCampaign": true,
+            "campaign_id": 3,
+            "quantity": 0,
+            "initial_quantity": 5,
+            "variations": [
+                {
+                    "initial_quantity": 2,
+                    "quantity": 0,
+                    "attributes": [
+                        {
+                            "name": "Color",
+                            "value": "White"
+                        },
+                        {
+                            "name": "Size",
+                            "value": "XL"
+                        }
+                    ],
+                    "users": [18, 34]
+                },
+                {
+                    "initial_quantity": 3,
+                    "quantity": 0,
+                    "attributes": [
+                        {
+                            "name": "Color",
+                            "value": "Black"
+                        },
+                        {
+                            "name": "Size",
+                            "value": "XL"
+                        }
+                    ],
+                    "users": [29, 17, 9]
+                }
+            ]
+        },
+        {
+            "vendor_id": 4
+        },
+        {
+            "vendor_id": 4
+        },
+        {
+            "vendor_id": 4,
+            "inCampaign": true,
+            "campaign_id": 4,
+            "quantity": 0,
+            "initial_quantity": 5,
+            "variations": [
+                {
+                    "initial_quantity": 2,
+                    "quantity": 0,
+                    "attributes": [
+                        {
+                            "name": "Color",
+                            "value": "Yellow"
+                        },
+                        {
+                            "name": "Size",
+                            "value": "XXL"
+                        }
+                    ],
+                    "users": [10, 18]
+                },
+                {
+                    "initial_quantity": 3,
+                    "quantity": 0,
+                    "attributes": [
+                        {
+                            "name": "Color",
+                            "value": "Marine"
+                        },
+                        {
+                            "name": "Size",
+                            "value": "Xs"
+                        }
+                    ],
+                    "users": [26, 22, 34]
+                }
+            ]
+        },
+        {
+            "vendor_id": 4,
+            "variations": [
+                {
+                    "attributes": [
+                        {
+                            "name": "Color",
+                            "value": "Yellow"
+                        },
+                        {
+                            "name": "Size",
+                            "value": "XXL"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

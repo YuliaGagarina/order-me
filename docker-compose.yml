@@ -1,0 +1,57 @@
+services:
+
+    # PHP Service
+    php:
+        container_name: om_api_container
+        build: './docker/php'
+        ports:
+            - '5173:5173'
+        volumes:
+            - '.:/var/www/html'
+        networks:
+            - 'om-net'
+        depends_on:
+            - pgsql
+
+    nginx:
+        container_name: nginx_om_api_container
+        image: nginx
+        ports:
+            - '${APP_PORT:-80}:80'
+        volumes:
+            - '.:/var/www/html'
+            - './docker/nginx/default.conf:/etc/nginx/conf.d/default.conf'
+            - './docker/nginx/nginx.conf:/etc/nginx/nginx.conf'
+        networks:
+            - 'om-net'
+        depends_on:
+            - php
+
+
+    pgsql:
+        image: 'postgres:15'
+        container_name: pgsql_om_api_container
+        ports:
+            - '${FORWARD_DB_PORT:-5432}:5432'
+        environment:
+            PGPASSWORD: '${DB_PASSWORD:-secret}'
+            POSTGRES_DB: '${DB_DATABASE}'
+            POSTGRES_USER: '${DB_USERNAME}'
+            POSTGRES_PASSWORD: '${DB_PASSWORD:-secret}'
+        volumes:
+            - 'om-net-pgsql:/var/lib/postgresql/data'
+            - './docker/pgsql/create-database.sql:/docker-entrypoint-initdb.d/10-create-database.sql'
+        networks:
+            - 'om-net'
+        healthcheck:
+            test: [ "CMD", "pg_isready", "-q", "-d", "${DB_DATABASE}", "-U", "${DB_USERNAME}" ]
+            retries: 3
+            timeout: 5s
+
+
+networks:
+    om-net:
+        driver: bridge
+volumes:
+    om-net-pgsql:
+        driver: local
